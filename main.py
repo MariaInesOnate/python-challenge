@@ -44,3 +44,7 @@ print(f"Total: ${net_profit_total}")
 print(f"Average Change: ${average_profit_change}")
 print(f"Greatest Increase in Profits: {max_increase[0]} (${max_increase[1]})")
 print(f"Greatest Decrease in Profits: {max_decrease[0]} (${max_decrease[1]})")
+
+#Save to text file# 
+with open(file_to_output, "a") as txt_file: 
+        txt_file.writelines(output) 
