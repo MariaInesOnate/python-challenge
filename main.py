@@ -2,8 +2,10 @@ import csv
 import os 
 
 #PyBankExercise#
+
+filename = "budget_data.csv"
 #Create path to csv file# 
-csvpath = os.path.join("Resources", "budget_data.csv")
+csvpath = os.path.join("Resources", filename)
 
 #Set Variables#
 total_months = 0 
@@ -12,6 +14,7 @@ change_in_month = []
 list_profitloss = []
 months = []
 revenue = []
+date = []
 max_decrease = revenue [0]
 max_increase = revenue [0]
 
@@ -30,3 +33,14 @@ with open(csvpath, 'r') as csvfile
 #Calculate total number of months# 
 total_months = len(months)
 
+#Look for greatest increase and greatest decrease# 
+
+# Print Financial Analysis
+print(f" ")
+print(f"Financial Analysis")
+print(f"----------------------------")
+print(f"Total Months: {number_months}")
+print(f"Total: ${net_profit_total}")
+print(f"Average Change: ${average_profit_change}")
+print(f"Greatest Increase in Profits: {max_increase[0]} (${max_increase[1]})")
+print(f"Greatest Decrease in Profits: {max_decrease[0]} (${max_decrease[1]})")
