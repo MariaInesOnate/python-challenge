@@ -11,7 +11,7 @@ csvpath = os.path.join("Resources", filename)
 total_months = 0 
 total_revenue = 0 
 change_in_month = []
-list_profitloss = []
+profitloss = []
 months = []
 revenue = []
 date = []
@@ -27,8 +27,8 @@ with open(csvpath, 'r') as csvfile
         csv_header = next(csvreader) 
 #Time to iterate# 
         for row in csvread:
-                  months.append(row[0])
-                  total_revenue.append(int(row[1]))
+                  profitloss.append((float(row[1])
+                  date.append(row[0])
         
 #Calculate total number of months# 
 total_months = len(months)
