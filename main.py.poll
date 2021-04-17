@@ -3,6 +3,13 @@ import csv
 
 #PyPoll Exercise# 
 
-#Create path for CSV file# 
-csvpath = os.path.join("Resources",
+filename = "budget_data.csv"
+#Create path to csv file# 
+csvpath = os.path.join("Resources", filename)
 
+#Set Variables#
+total_votes = 0 
+votes_khan = 0 
+votes_correy = 0 
+votes_li = 0 
+votes otooley = 0
