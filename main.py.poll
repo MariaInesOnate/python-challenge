@@ -27,10 +27,18 @@ with open(csvpath, newline = '') as csvfile:
             votes_khan +=1 
         elif (row[2]== "Li"): 
             votes_li +=1 
+        elif (row[2]== "Correy"): 
+            votes_correy +=1
         else: 
             votes_otooley +=1 
             
-#Percentage for each candidate# 
+#Percentage for each Candidate# 
 
-percent_khan = votes_khan / total_votes 
-        
+percent_khan = votes_khan / total_votes
+percent_li = votes_li / total_votes 
+percent_correy = votes_correy / total_votes 
+percent_otooley = votes_otooley / total_votes 
+
+#Find the Winner" 
+
+winner = max(votes_khan, votes_correy, 
