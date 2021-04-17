@@ -35,6 +35,10 @@ total_months = len(months)
 
 #Look for greatest increase and greatest decrease# 
 
+
+#Create path for output file# 
+output_path = os.path.join('..', 'python_challenge', 'summary.txt')
+
 # Print Financial Analysis
 print(f" ")
 print(f"Financial Analysis")
