@@ -23,6 +23,14 @@ with open(csvpath, newline = '') as csvfile:
         total_votes += 1 
 
 #Votes For Each Candidate#
-        if (row[2] == "Khan"): 
+        if (row[2]== "Khan"): 
             votes_khan +=1 
+        elif (row[2]== "Li"): 
+            votes_li +=1 
+        else: 
+            votes_otooley +=1 
+            
+#Percentage for each candidate# 
+
+percent_khan = votes_khan / total_votes 
         
