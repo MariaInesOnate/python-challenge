@@ -13,3 +13,14 @@ votes_khan = 0
 votes_correy = 0 
 votes_li = 0 
 votes otooley = 0
+
+with open(csvpath, newline = '') as csvfile: 
+    csvreader = csv.reader(csvfile, delimeter= ',') 
+    csvheader = next(csvfile) 
+
+#Calculate Votes# 
+    for row in csvreader: 
+        total_votes += 1 
+
+#Votes For Each Candidate#
+    
