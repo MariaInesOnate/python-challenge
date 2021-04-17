@@ -66,3 +66,22 @@ print(f"---------------------------------")
 print(f"WINNER: {winner_name}")
 print(f"---------------------------------")
 
+#Create path for output file# 
+output_path = os.path.join('..', 'python_challenge', 'PyPoll_Results.txt')
+
+#Save to text file# 
+with open(file_to_output, "a") as txt_file: 
+
+#Write on file#
+    txtfile.write(f"Election Results\n")
+    txtfile.write(f"---------------------------\n")
+    txtfile.write(f"Total Votes: {total_votes}\n")
+    txtfile.write(f"---------------------------\n")
+    txtfile.write(f"Kahn: {percent_khan:.3%}({votes_khan})\n")
+    txtfile.write(f"Correy: {percent_correy:.3%}({votes_correy})\n")
+    txtfile.write(f"Li: {percent_li:.3%}({votes_li})\n")
+    txtfile.write(f"O'tooley: {percent_otooley:.3%}({votes_otooley})\n")
+    txtfile.write(f"----------------------------\n")
+    txtfile.write(f"WINNER: {winner_name}\n")
+    txtfile.write(f"----------------------------\n")
+
