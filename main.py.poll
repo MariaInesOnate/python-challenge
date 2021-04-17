@@ -3,4 +3,6 @@ import csv
 
 #PyPoll Exercise# 
 
+#Create path for CSV file# 
+csvpath = os.path.join("Resources",
 
