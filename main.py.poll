@@ -41,4 +41,28 @@ percent_otooley = votes_otooley / total_votes
 
 #Find the Winner" 
 
-winner = max(votes_khan, votes_correy, 
+winner = max(votes_khan, votes_li, votes_correy, votes_otooley)
+
+if winner == votes_khan: 
+    winner_name = "Khan" 
+elif winner == votes_correy: 
+    winner_name = "Correy" 
+elif winner == votes_li: 
+    winner_name == "Li" 
+else: 
+    winner_name == "O'Tooley" 
+
+#Print in TerminaL" 
+
+print(f"Election Results")
+print(f"---------------------------------")
+print(f"Total Votes: {total_votes}")
+print(f"---------------------------------")
+print(f"Kahn: {khan_percent:.3%}({khan_votes})")
+print(f"Correy: {correy_percent:.3%}({correy_votes})")
+print(f"Li: {li_percent:.3%}({li_votes})")
+print(f"O'tooley: {otooley_percent:.3%}({otooley_votes})")
+print(f"---------------------------------")
+print(f"WINNER: {winner_name}")
+print(f"---------------------------------")
+
