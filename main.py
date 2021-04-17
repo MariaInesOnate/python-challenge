@@ -34,6 +34,9 @@ with open(csvpath, 'r') as csvfile
 total_months = len(months)
 
 #Look for greatest increase and greatest decrease# 
+for r in range(len(revenue)):
+        if revenue [r] >= max_increase:
+                   max_increase = revenue[r]
 
 
 #Create path for output file# 
