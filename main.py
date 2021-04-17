@@ -47,14 +47,14 @@ for r in range(len(revenue)):
 average_cr = round(total_revenue/total_months, 2)                                
 
 #Create path for output file# 
-output_path = os.path.join('..', 'python_challenge', 'summary.txt')
+output_path = os.path.join('..', 'python_challenge', 'PyBank Analysis.txt')
 
 # Print Financial Analysis
 print(f" ")
 print(f"Financial Analysis")
 print(f"----------------------------")
 print(f"Total Months: {total_months}")
-print(f"Total: ${net_profit_total}")
+print(f"Total: ${total_revenue}")
 print(f"Average Change: ${average_cr}")
 print(f"Greatest Increase in Profits: {max_increase[0]} (${max_increase[1]})")
 print(f"Greatest Decrease in Profits: {max_decrease[0]} (${max_decrease[1]})")
@@ -67,7 +67,7 @@ with open(file_to_output, "a") as txt_file:
          txtfile.write(f"Financial Analysis\n")
          txtfile.write(f"--------------------------\n")
          txtfile.write(f"Total Months: {total_months}\n")
-        txtfile.write(f"Total: ${net_amount}\n")
-        txtfile.write(f"Average Change: {average_change:.2f}\n")
-        txtfile.write(f"Greatest Inc in Profits:, {greatest_increase_month}, ( ${highest})\n")
-        txtfile.write(f"Greatest Dec in Profits:, {greatest_decrease_month}, (${lowest})\n")                            
+         txtfile.write(f"Total: ${total_revenue}\n")
+         txtfile.write(f"Average Change: {average_cr:.2f}\n")
+         txtfile.write(f"Greatest Inc in Profits:, {greatest_increase_month}, ( ${highest})\n")
+         txtfile.write(f"Greatest Dec in Profits:, {greatest_decrease_month}, (${lowest})\n")                            
