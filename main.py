@@ -64,4 +64,10 @@ print(output)
 
 #Save to text file# 
 with open(file_to_output, "a") as txt_file: 
-        txt_file.writelines(output) 
+         txtfile.write(f"Financial Analysis\n")
+         txtfile.write(f"--------------------------\n")
+         txtfile.write(f"Total Months: {total_months}\n")
+        txtfile.write(f"Total: ${net_amount}\n")
+        txtfile.write(f"Average Change: {average_change:.2f}\n")
+        txtfile.write(f"Greatest Inc in Profits:, {greatest_increase_month}, ( ${highest})\n")
+        txtfile.write(f"Greatest Dec in Profits:, {greatest_decrease_month}, (${lowest})\n")                            
