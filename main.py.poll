@@ -23,4 +23,6 @@ with open(csvpath, newline = '') as csvfile:
         total_votes += 1 
 
 #Votes For Each Candidate#
-    
+        if (row[2] == "Khan"): 
+            votes_khan +=1 
+        
