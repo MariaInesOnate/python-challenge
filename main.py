@@ -36,8 +36,15 @@ total_months = len(months)
 #Look for greatest increase and greatest decrease# 
 for r in range(len(revenue)):
         if revenue [r] >= max_increase:
-                   max_increase = revenue[r]
+                max_increase = revenue[r]
+                max_increase_month = months[r]
+        elif revenue[r] <= max_dec:
+                max_decrease = revenue [r]
+                max_decrease_month = months[r]
+        total_revenue += revenue[r]
 
+#Find the average change in revenue#   
+average_cr = round(total_revenue/total_months, 2)                                
 
 #Create path for output file# 
 output_path = os.path.join('..', 'python_challenge', 'summary.txt')
@@ -46,11 +53,14 @@ output_path = os.path.join('..', 'python_challenge', 'summary.txt')
 print(f" ")
 print(f"Financial Analysis")
 print(f"----------------------------")
-print(f"Total Months: {number_months}")
+print(f"Total Months: {total_months}")
 print(f"Total: ${net_profit_total}")
-print(f"Average Change: ${average_profit_change}")
+print(f"Average Change: ${average_cr}")
 print(f"Greatest Increase in Profits: {max_increase[0]} (${max_increase[1]})")
 print(f"Greatest Decrease in Profits: {max_decrease[0]} (${max_decrease[1]})")
+
+#Print to terminal# 
+print(output)
 
 #Save to text file# 
 with open(file_to_output, "a") as txt_file: 
